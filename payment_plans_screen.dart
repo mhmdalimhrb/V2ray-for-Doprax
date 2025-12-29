@@ -28,7 +28,7 @@ class PaymentPlansScreen extends StatelessWidget {
     final pricePerCoin = double.parse(coinPrice);
     final coinAmount = accountPrice / pricePerCoin;
     final weiAmount = coinAmount * 1e18;
-    return weiAmount;
+    return weiAmount.round();
   }
 
   Future<String> fetchCryptoQuote() async {
@@ -637,3 +637,4 @@ class PaymentPlansScreen extends StatelessWidget {
     );
   }
 }
+
